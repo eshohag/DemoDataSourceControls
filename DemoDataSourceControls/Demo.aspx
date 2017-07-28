@@ -11,13 +11,15 @@
         <div>
             Select Your Country&nbsp;
             <asp:DropDownList ID="DropDownList1" runat="server" AppendDataBoundItems="True" AutoPostBack="True" DataSourceID="DropDownlistSqlDataSource" DataTextField="Country" DataValueField="Country" Height="25px" Width="168px">
-           <asp:ListItem Value="" Text="Select a Country"></asp:ListItem>
-                
+                <asp:ListItem Value="" Text="Select a Country"></asp:ListItem>
+
             </asp:DropDownList>
             <asp:SqlDataSource ID="DropDownlistSqlDataSource" runat="server" ConnectionString="<%$ ConnectionStrings:NorthwindConnectionString %>" SelectCommand="SELECT DISTINCT [Country] FROM [Customers]"></asp:SqlDataSource>
             <br />
-            Here is the GridView</div>
+        </div>
+        <h2>Here is the GridView</h2>
         <asp:GridView ID="GridView1" runat="server" AllowPaging="True" AllowSorting="True" AutoGenerateColumns="False" BackColor="White" BorderColor="#336666" BorderStyle="Double" BorderWidth="3px" CellPadding="4" DataKeyNames="CustomerID" DataSourceID="GridViewSqlDataSource" GridLines="Horizontal">
+           
             <Columns>
                 <asp:CommandField ShowSelectButton="True" />
                 <asp:BoundField DataField="CustomerID" HeaderText="CustomerID" ReadOnly="True" SortExpression="CustomerID" />
@@ -47,7 +49,8 @@
         </asp:SqlDataSource>
         <p>
             <br />
-            Here is the Details View</p>
+           <h2>Here is the Details View</h2> 
+        </p>
         <p>
             <asp:DetailsView ID="DetailsView1" runat="server" AutoGenerateRows="False" BackColor="White" BorderColor="#CCCCCC" BorderStyle="None" BorderWidth="1px" CellPadding="4" DataKeyNames="CustomerID" DataSourceID="DetailsSqlDataSource" ForeColor="Black" GridLines="Horizontal" Height="50px" Width="125px">
                 <EditRowStyle BackColor="#CC3333" Font-Bold="True" ForeColor="White" />
@@ -106,6 +109,7 @@
         </p>
     </form>
     <p>
-        &nbsp;</p>
+        &nbsp;
+    </p>
 </body>
 </html>
